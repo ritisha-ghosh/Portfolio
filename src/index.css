@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
 body {
   margin: 0;
-  font-family: "Raleway", serif !important;
+  font-family: "Montserrat", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
+ /* background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35)); */
+
+ background: rgb(0, 0, 0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgb(7, 24, 90) 28%, rgb(2, 45, 54) 58%, rgba(0,0,0,1) 100%);
+  letter-spacing: 0.1em; /* Adjust the value as needed */
 }

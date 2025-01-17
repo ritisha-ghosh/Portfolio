@@ -1,0 +1,262 @@
+.techstack-container {
+  text-align: center;
+  padding-bottom: 50px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Center the button vertically */
+  
+}
+
+.collapse-button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%; /* Ensure the container takes full width */
+}
+
+.collapse-button {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px; /* Reduced button height */
+  width: 200px; /* Set button width */
+  background-color: #0077ff; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+  margin-left: auto; /* Center the button horizontally */
+  margin-right: auto; /* Center the button horizontally */
+}
+
+.collapse-button:hover {
+  background-color: #0056b3; /* Darker background color on hover */
+}
+
+.collapse-button svg {
+  margin-left: 0px; /* Space between text and icon */
+}
+
+.collapse-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.collapse-content.show {
+  max-height: 100px; /* Adjust based on content height */
+  transition: max-height 0.5s ease-in;
+}
+
+.tech-icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tech-icons {
+  text-align: center;
+  margin: 10px;
+  color: #0077ff; /* Make icons colorful */
+}
+
+.icon-text {
+  font-size: 2.5em;
+}
+
+.icon-name {
+  margin-top: 5px;
+  font-size: 1em;
+  color: #ffffff; /* Make names visible */
+}
+
+.folder {
+  background: rgba(255, 255, 255, 0); /* Transparent background */
+  border: 2px solid #0077ff; /* 2px outline with color #0077ff */
+  border-radius: 10px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  width: 450px;
+  cursor: pointer;
+  user-select: none; /* Prevent text selection */
+}
+
+.folder-summary {
+  padding: 15px 15px 15px 15px;
+  display: flex;
+  line-height: 1;
+  height: 80px;
+  position: relative;
+}
+
+.folder-summary__start {
+  position: relative;
+}
+
+.folder-summary__file-count {
+  position: absolute;
+  top: -3px;
+}
+
+.folder-summary__file-count__amount {
+  color: #ffffff;
+  font-size: 12px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.folder-summary__file-count svg {
+  color: #5166fa;
+  height: 30px;
+  width: auto;
+}
+
+.folder-summary__details {
+  padding: 8px 0 0 0px;
+}
+
+.folder-summary__details__name {
+  color: #393738;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.folder-summary__end {
+  margin-left: auto;
+  padding: 8px 0 0 0px;
+}
+
+.folder-summary__end svg {
+  fill: #c3c2c3;
+}
+
+.folder-collapse-button {
+  appearance: none;
+  background: transparent;
+  border-radius: 30px;
+  border: 0;
+  cursor: pointer;
+  height: 30px;
+  opacity: 0;
+  outline: none;
+  position: absolute;
+  position: relative;
+  width: 30px;
+}
+
+.folder-collapse-button::after {
+  background: #efeff0;
+  border-radius: 40px;
+  content: "";
+  height: 35px;
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-out;
+  width: 35px;
+}
+
+.folder-collapse-button:hover::after {
+  opacity: 1;
+}
+
+.folder-collapse-button svg {
+  color: #9c9c9e;
+  left: 50%;
+  position: absolute;
+  stroke-width: 3;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.folder-content {
+  display: none;
+  padding-left: 20px; /* Indent nested content */
+}
+
+.folder.open .folder-content {
+  display: block;
+}
+
+.folder-item {
+  align-items: flex-start;
+  display: flex;
+  height: 50px;
+  line-height: 1;
+  opacity: 1; /* Make items visible */
+  padding: 20px 25px;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Transparent line between each row */
+  padding-top: 5px; /* Add padding on top */
+  padding-bottom: 5px; /* Add padding on bottom */
+  width: calc(100% - 20px); /* Ensure the line spans the full width with equal gaps on both sides */
+  margin-right: 20px; /* Add right margin */
+}
+
+.folder-item__icon svg {
+  display: block;
+  height: 40px;
+  width: auto;
+  color: #0077ff; /* Make icons colorful */
+}
+
+.folder-item__details {
+  padding: 1px 0 0 15px;
+}
+
+.folder-item__details__name {
+  color: #0077ff; /* Make names colorful */
+  font-size: 17px;
+  font-weight: 500;
+  position: relative;
+}
+
+.folder-item__size {
+  color: #6a696a;
+  font-weight: 500;
+  margin-left: auto;
+  margin-top: 2px;
+}
+
+.folder-item:not(:last-child)::after {
+  background: #edecee;
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 0; /* Ensure the line starts from the left edge */
+  right: 0; /* Ensure the line ends at the right edge */
+}
+
+@media (max-width: 767px) {
+  .folder {
+    width: 100%; /* Make folder full width on smaller screens */
+  }
+
+  .folder-summary {
+    padding: 10px 15px; /* Adjust padding for smaller screens */
+  }
+
+  .folder-summary__details__name {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+
+  .folder-collapse-button {
+    height: 25px; /* Adjust button size for smaller screens */
+    width: 25px; /* Adjust button size for smaller screens */
+  }
+
+  .folder-collapse-button svg {
+    height: 20px; /* Adjust icon size for smaller screens */
+    width: 20px; /* Adjust icon size for smaller screens */
+  }
+}
+
+

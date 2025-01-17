@@ -11,7 +11,7 @@ html {
     rgba(12, 10, 22, 0.863)
   );
 
-  --imp-text-color: #c770f0;
+  --imp-text-color: #0077ff;
 }
 
 .purple {
@@ -31,7 +31,6 @@ button:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 999999;
   background-color: #0c0513;
   background-image: url(./Assets/pre.svg);
   background-repeat: no-repeat;
@@ -62,13 +61,13 @@ button:focus {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(178, 121, 216, 0.959);
+  background: rgb(41, 1, 186);
   border-radius: 12px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(222, 130, 235, 0.911);
+  background: rgba(5, 16, 223, 0.911);
   border-radius: 12px;
 }
 
@@ -97,7 +96,7 @@ button:focus {
 
 .navbar-toggler span {
   display: block !important;
-  background-color: #be50f4 !important;
+  background-color: #0e0591 !important;
   height: 4px !important;
   width: 27px !important;
   margin-top: 5px !important;
@@ -155,8 +154,8 @@ button:focus {
 }
 
 .logo {
-  height: 1.4em !important;
-  width: 2.5em !important;
+  height: fit-content !important;
+  width: 2.2em !important;
 }
 
 .navbar-nav .nav-link {
@@ -184,20 +183,19 @@ button:focus {
   font-weight: 400;
   transition: all 0.3s ease-out 0s;
   position: relative;
-  z-index: 1;
 }
 
 .navbar-nav .nav-item a::after {
   content: "";
+  
   position: relative;
   display: block;
-  height: 5px;
+  height: 3px;
   width: 0;
   border-radius: 16px;
-  background: #c95bf5;
+  background: #011e81;
   bottom: 1px;
   left: 0;
-  z-index: -1;
   transition: all 0.3s ease-out 0s;
 }
 
@@ -256,47 +254,63 @@ button:focus {
 
 .home-section {
   position: relative;
-  z-index: -1;
   background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
-  background-position: top center;
+  background-position: center center;
   background-repeat: no-repeat;
+  background-size: cover; /* Ensure the background image covers the entire section */
+  width: 100%;
+  min-height: 90vh; /* Make the section take at least the full viewport height */
   padding-bottom: 30px !important;
   padding-top: 30px !important;
 }
 
+.home-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0); /* Adjust the opacity as needed */
+  
+}
+
 .home-content {
-  padding: 9rem 0 2rem !important;
+  position: relative;
+  z-index: 2;
+  padding: 0rem 0 2rem !important;
   color: whitesmoke;
   text-align: left;
 }
 
 .heading {
   font-size: 2.4em !important;
-  padding-left: 50px !important;
+  padding-left: 0px !important;
 }
 
 .heading-name {
   font-size: 2.5em !important;
-  padding-left: 45px !important;
+  padding-left: 0px !important;
 }
 
 .main-name {
-  color: #cd5ff8;
+  color: #0a5deb;
 }
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
-  color: #be6adf !important;
+  color: #0a5deb !important;
   font-weight: 600 !important;
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: #b562d6 !important;
+  color: #0a5deb !important;
 }
 
 @media (max-width: 767px) {
   .Typewriter__wrapper {
-    font-size: 1.4em !important;
+    font-size: 1.7em !important;
+  text-align: center;
     font-weight: 500 !important;
     position: absolute !important;
   }
@@ -307,7 +321,8 @@ button:focus {
 
 .myAvtar {
   justify-content: center !important;
-  padding-top: 9em !important;
+  padding-top: 8em !important;
+
 }
 
 @media (max-width: 767px) {
@@ -358,12 +373,12 @@ button:focus {
   text-align: center !important;
   font-size: 1.2em !important;
   line-height: 2em !important;
-  background: rgba(255, 255, 255, 0.972) !important;
+  background: rgb(0, 0, 0) !important;
   border-radius: 50% !important;
   transition: 0.5s !important;
 }
 
-.home-social-icons::before {
+.homesocial-icons::before {
   content: "";
   position: absolute;
   top: 0;
@@ -371,34 +386,37 @@ button:focus {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: #68187a;
+  background: #000000;
   transition: 0.5s;
   transform: scale(0.9);
-  z-index: -1;
+
 }
 
 .home-social-icons:hover::before {
   transform: scale(1.1);
-  box-shadow: 0 0 15px #801f95;
+  box-shadow: 0 0 15px #014af5;
 }
 
 .home-social-icons:hover {
-  color: #87209e;
-  box-shadow: 0 0 5px #87209e;
-  text-shadow: 0 0 2px #87209e;
+  color: #014af5;
+  box-shadow: 0 0 5px #014af5;
+  text-shadow: 0 0 2px #014af5;
 }
+
+
 
 .social-icons {
   display: inline-block !important;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .icon-colour {
-  color: #700c86 !important;
+  color: #ffffff !important;
 }
 
 /* --------- */
+
 /* Footer */
 /* --------- */
 .footer {
@@ -412,7 +430,6 @@ button:focus {
 }
 
 .footer-body {
-  z-index: 1;
   text-align: center !important;
 }
 
@@ -452,15 +469,15 @@ button:focus {
 }
 
 .project-card {
-  padding-top: 50px !important;
-  padding-bottom: 50px !important;
+  padding-top: 20px !important;
+  padding-bottom: 25px !important;
   padding-left: 25px !important;
   padding-right: 25px !important;
   height: auto !important;
 }
 
 .project-card-view {
-  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
+  box-shadow: 0 4px 5px 3px rgba(3, 14, 137, 0.459) !important;
   color: white !important;
   background-color: transparent !important;
   opacity: 0.9 !important;
@@ -470,12 +487,12 @@ button:focus {
 .project-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
-  box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
+  box-shadow: 0 4px 4px 5px rgba(7, 15, 171, 0.561) !important;
 }
 
 .blog-card {
-  padding-top: 50px !important;
-  padding-bottom: 50px !important;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
   padding-left: 25px !important;
   padding-right: 25px !important;
   height: auto !important;
@@ -518,14 +535,15 @@ button:focus {
 
 .btn-primary {
   color: #fff !important;
-  background-color: #623686 !important;
-  border-color: #623686 !important;
+  background-color: #0a199d91 !important;
+  border-color: #000000 !important;
 }
 
 .btn-primary:hover {
   color: #fff !important;
-  background-color: #6d20c5d7 !important;
-  border-color: #6d20c5d7 !important;
+  background-color: #020afb9e !important;
+  border-color: #020afb9e !important;
+ 
 }
 .btn:focus {
   outline: none !important;
@@ -535,7 +553,7 @@ button:focus {
   color: white !important;
   font-size: 2.3em !important;
   font-weight: 500 !important;
-  padding-top: 10px !important;
+  padding-top: 0px !important;
 }
 
 /* --------- */
@@ -551,41 +569,44 @@ button:focus {
 }
 
 .tech-icons {
-  font-size: 4.5em !important;
-  margin: 15px !important;
-  padding: 10px !important;
+  font-size: 1.6em !important; /* reduced from 4.5em */
+  margin: 10px !important; /* reduced from 15px */
+  padding: 5px !important; /* reduced from 10px */
   opacity: 0.93 !important;
-  border: 1.7px solid rgba(200, 137, 230, 0.637) !important;
+  border: 1.5px solid #1952ed !important; /* slightly reduced border */
   vertical-align: middle !important;
   text-align: center !important;
   border-radius: 5px !important;
   display: table !important;
-  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
+  box-shadow: 3px 4px 3px 2px rgba(89, 4, 168, 0.137) !important; /* adjusted shadow */
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 500px) {
   .tech-icons {
-    margin: 10px !important;
+    margin: 8px !important; /* adjusted for smaller screens */
   }
 }
 
 .tech-icons:hover {
   transform: scale(1.05) !important;
   overflow: hidden !important;
-  border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
+  border: 2px solid rgba(9, 25, 129, 0.883) !important; /* slightly reduced border */
 }
+
 .tech-icon-images {
-  padding: 20px !important;
-  line-height: 1.6 !important;
+  padding: 15px !important; /* reduced padding */
+  line-height: 1.5 !important; /* slight line-height reduction */
 }
 
 .quote-card-view {
   border: none !important;
   color: white !important;
   background-color: transparent !important;
+
 }
+
 
 .about-activity {
   list-style: none !important;
@@ -602,6 +623,7 @@ button:focus {
 /* Resume */
 /* --------- */
 
+/*  
 .resume-section {
   position: relative !important;
   padding-top: 110px !important;
@@ -683,7 +705,7 @@ button:focus {
   top: 0;
   background: #fff;
   border: 2px solid #8a49a8;
-}
+}  */
 
 .like-item {
   padding-top: 10px !important;
@@ -720,24 +742,161 @@ button:focus {
   }
 }
 
-.fork-btn {
+.mail-btn,.cvbtn {
   font-size: 1.1em !important;
   padding-top: 10px !important;
 }
 
-.fork-btn-inner {
+.mail-btn-inner ,.cvbtn{
   line-height: 1.4em !important;
-  background-color: #934cce5e !important;
+  background-color: #084fdd5e !important;
   padding: 0.25rem 1.1rem !important;
   vertical-align: middle !important;
   text-align: center !important;
 }
 
-.fork-btn-inner:hover {
+.mail-btn-inner:hover,.cvbtn:hover {
   transform: translateY(-2px) !important;
-  background-color: #a24dd386 !important;
-  border-color: #a24dd386 !important;
+  background-color: #053eaee9 !important;
+  border-color: #09159bc4 !important;
 }
-.fork-btn-inner::after {
+.mail-btn-inner::after ,.cvbtn::after{
   display: none !important;
 }
+
+.project-heading {
+  text-align: center;
+  font-size: 2em;
+  color: #0077ff; /* Customize as desired */
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 1.8em;
+  color: #0077ff; /* Customize as desired */
+}
+
+.roadmap {
+  display: flex;
+  align-items: flex-start; /* Align items to the start */
+  justify-content: center; /* Center the roadmap */
+  flex-wrap: wrap; /* Allow wrapping of cards */
+  gap: 20px; /* Reduced gap between cards */
+}
+
+.education-col {
+  margin-bottom: 10px; /* Reduced margin for better spacing */
+  position: relative;
+  max-width: 350px; /* Set a maximum width */
+  width: auto; /* Allow full width within the column */
+}
+
+.milestone {
+  position: relative;
+  text-align: left; /* Align text to the left */
+  margin-bottom: 10px; /* Space between logo and card */
+}
+
+.milestone-line {
+  position: absolute;
+  left: -20px; /* Position the line to the left of the card */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #0077ff; /* Customize as desired */
+}
+
+.milestone-bullet {
+  position: absolute;
+  left: -6px; /* Position the bullet to the left of the line */
+  top: 0; /* Position the bullet at the top of the line */
+  width: 12px;
+  height: 12px;
+  background-color: #0077ff; /* Customize as desired */
+  border-radius: 50%;
+}
+
+.milestone-logo {
+  width: 60px; /* Adjust size of the logo */
+  height: 60px; /* Adjust size of the logo */
+  border-radius: 50%; /* Optional: make logo circular */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  margin-bottom: -40px; /* Pull logo up into the card */
+  position: relative; /* Ensure positioning works */
+}
+
+.education-card1 {
+  background-color: rgba(255, 255, 255, 0); /* Transparent background */
+  border: 1px solid #1207e2; /* Blue border only */
+  text-align: center;
+  padding-top: 5px; /* Reduced padding at the top */
+  padding-bottom: 5px; /* Reduced padding at the bottom */
+  width: auto; /* Allow width to adjust based on content */
+  transition: transform 0.2s ease-in-out; /* Smooth transition for hover effect */ 
+}
+
+.education-card1:hover {
+  transform: scale(1.04); /* Slightly scale up on hover for a low hover effect */
+}
+
+.education-details {
+  opacity: 1; /* Details are visible */
+  color: #ffffff;
+  font-family: arial;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  gap: 0px; /* Reduced gap between cards */
+}
+
+.experience-card {
+  background-color: rgba(255, 255, 255, 0); /* Transparent background */
+  border: 1px solid #1207e2; /* Blue border only */
+  text-align: center;
+  padding-top: 5px; /* Reduced padding at the top */
+  padding-bottom: 5px; /* Reduced padding at the bottom */
+  transition: transform 0.2s ease-in-out; /* Smooth transition for hover effect */
+  margin-bottom: 10px; /* Reduced margin for better spacing */
+}
+
+.experience-card:hover {
+  transform: scale(1.04); /* Slightly scale up on hover for a low hover effect */
+}
+
+.experience-details {
+  opacity: 1; /* Details are visible */
+  color: #ffffff;
+  font-family: arial; 
+}
+
+@media (max-width: 767px) {
+  .roadmap,
+  .experience {
+    flex-direction: column; /* Ensure single-column layout */
+    align-items: flex-start; /* Align items to the start */
+    justify-content: center; /* Center the cards */
+    padding-left: 15px; /* Add left padding */
+    padding-right: 15px; /* Add right padding */
+  }
+
+  .education-col,
+  .experience-card {
+    margin-left: 0; /* Remove left margin */
+    margin-right: 0; /* Remove right margin */
+    padding-left: 15px; /* Add left padding */
+    padding-right: 15px; /* Add right padding */
+  }
+
+  .milestone {
+    margin-left: 0; /* Remove left margin */
+    margin-right: 0; /* Remove right margin */
+    padding-left: 15px; /* Add left padding */
+    padding-right: 15px; /* Add right padding */
+  }
+}
+
+/* --------- */
+/* Folder Collapse */
+/* --------- */

@@ -1,38 +1,3 @@
-<h2 align="center">
-  Portfolio Website - v2.0<br/>
-  <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a>
-</h2>
-<div align="center">
-  <img alt="Demo" src="./Images/readme-img1.png" />
-</div>
-
-<br/>
-
-<center>
-
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
-![GitHub Repo stars](https://img.shields.io/github/stars/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge) &nbsp;
-![GitHub forks](https://img.shields.io/github/forks/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge)
-
-</center>
-
-<h3 align="center">
-    🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Report Bug</a> &nbsp; &nbsp;
-    🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Request Feature</a>
-</h3>
-
-## TL;DR
-
-You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [Soumyajit4419](https://github.com/soumyajit4419/Portfolio). Thanks!
-
-## Built With
-
-My personal portfolio <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
-
 This project was built using these technologies.
 
 - React.js
@@ -64,13 +29,120 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.
 
-## Usage Instructions
 
-Open the project folder and Navigate to `/src/components/`. <br/>
-You will find all the components used and you can edit your information accordingly.
 
-### Show your support
 
-Give a ⭐ if you like this website!
+import React, { useState } from "react";
 
-<a href="https://www.buymeacoffee.com/soumyajit4419" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" height= "60px" width= "217px" ></a>
+import oi1 from "../../Assets/certificates/OasisInfobyte/1.jpg";
+import oi2 from "../../Assets/certificates/OasisInfobyte/2.jpg";
+import oi3 from "../../Assets/certificates/OasisInfobyte/3.jpg";
+
+import hr1 from "../../Assets/certificates/HackerRank/1.jpg";
+import hr2 from "../../Assets/certificates/HackerRank/2.jpg";
+import hr3 from "../../Assets/certificates/HackerRank/3.jpg";
+
+import ibm1 from "../../Assets/certificates/IBM/1.jpg";
+
+import fr1 from "../../Assets/certificates/Forage/1.jpg";
+import fr2 from "../../Assets/certificates/Forage/2.jpg";
+import fr3 from "../../Assets/certificates/Forage/3.jpg";
+
+import lu1 from "../../Assets/certificates/LetsUpgrade/1.jpg";
+import lu2 from "../../Assets/certificates/LetsUpgrade/2.jpg";
+import lu3 from "../../Assets/certificates/LetsUpgrade/3.jpg";
+
+import ex1 from "../../Assets/certificates/Extra/1.jpg";
+import ex2 from "../../Assets/certificates/Extra/2.jpg";
+import ex3 from "../../Assets/certificates/Extra/3.jpg";
+
+const Certificates = () => {
+  const [showExperience, setShowExperience] = useState(false);
+  const [showOthers, setShowOthers] = useState({
+    HackerRank: false,
+    IBM: false,
+    Forage: false,
+    LetsUpgrade: false,
+    Extra: false,
+  });
+
+  const toggleExperience = () => setShowExperience(!showExperience);
+
+  const toggleOthers = (key) => {
+    setShowOthers((prev) => ({ ...prev, [key]: !prev[key] }));
+  };
+
+  return (
+    <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
+      <h1>Experience Certificates</h1>
+      <button onClick={toggleExperience} style={{ margin: "10px 0", padding: "10px", cursor: "pointer" }}>
+        {showExperience ? "Hide" : "Show"} Oasis Infobyte Certificates
+      </button>
+      {showExperience && (
+        <div>
+          <img src={oi1} alt="Oasis 1" style={{ width: "300px", margin: "10px" }} />
+          <img src={oi2} alt="Oasis 2" style={{ width: "300px", margin: "10px" }} />
+          <img src={oi3} alt="Oasis 3" style={{ width: "300px", margin: "10px" }} />
+        </div>
+      )}
+
+      <h1>Other Certificates</h1>
+
+      {[
+        { key: "HackerRank", images: [hr1, hr2, hr3] },
+        { key: "IBM", images: [ibm1] },
+        { key: "Forage", images: [fr1, fr2, fr3] },
+        { key: "LetsUpgrade", images: [lu1, lu2, lu3] },
+        { key: "Extra", images: [ex1, ex2, ex3] },
+      ].map(({ key, images }) => (
+        <div key={key} style={{ marginBottom: "20px" }}>
+          <button
+            onClick={() => toggleOthers(key)}
+            style={{ margin: "10px 0", padding: "10px", cursor: "pointer" }}
+          >
+            {showOthers[key] ? "Hide" : "Show"} {key} Certificates
+          </button>
+          {showOthers[key] && (
+            <div>
+              {images.map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  alt={`${key} ${index + 1}`}
+                  style={{ width: "300px", margin: "10px" }}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Certificates;
+
+
+
+
+import oi1 from "../../Assets/certificates/OasisInfobyte/1.jpg";
+import oi2 from "../../Assets/certificates/OasisInfobyte/2.jpg";
+import oi3 from "../../Assets/certificates/OasisInfobyte/3.jpg";
+
+import hr1 from "../../Assets/certificates/HackerRank/1.jpg";
+import hr2 from "../../Assets/certificates/HackerRank/2.jpg";
+import hr3 from "../../Assets/certificates/HackerRank/3.jpg";
+
+import ibm1 from "../../Assets/certificates/IBM/1.jpg";
+
+import fr1 from "../../Assets/certificates/Forage/1.jpg";
+import fr2 from "../../Assets/certificates/Forage/2.jpg";
+import fr3 from "../../Assets/certificates/Forage/3.jpg";
+
+import lu1 from "../../Assets/certificates/LetsUpgrade/1.jpg";
+import lu2 from "../../Assets/certificates/LetsUpgrade/2.jpg";
+import lu3 from "../../Assets/certificates/LetsUpgrade/3.jpg";
+
+import ex1 from "../../Assets/certificates/Extra/1.jpg";
+import ex2 from "../../Assets/certificates/Extra/2.jpg";
+import ex3 from "../../Assets/certificates/Extra/3.jpg";
