@@ -277,7 +277,6 @@ button:focus {
 
 .home-content {
   position: relative;
-  z-index: 2;
   padding: 0rem 0 2rem !important;
   color: whitesmoke;
   text-align: left;
@@ -424,6 +423,9 @@ button:focus {
   bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
+  position: relative;
+  width: 100%;
+  margin-top: auto;
 }
 .footer-copywright {
   text-align: center !important;

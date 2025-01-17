@@ -15,33 +15,33 @@ function ProjectCards(props) {
     <Card className="project-card-view">
       <Card.Img variant="top" src={props.imgPath} alt="card-img" />
       <Card.Body>
-        <Card.Title style={{color:"#0689d6"}}>{props.title}</Card.Title>
+        <Card.Title style={{ color: "#0689d6" }}>{props.title}</Card.Title>
         <Card.Text style={{ textAlign: "justify", fontFamily: "arial" }}>
-          {isReadMore ? props.description.slice(0, 100) + "..." : props.description}
+          {isReadMore ? props.description.slice(0, 65) + "..." : props.description}
           <span onClick={toggleReadMore} style={{ color: "#0577b3", cursor: "pointer" }}>
             {isReadMore ? " Read More" : " Show Less"}
           </span>
         </Card.Text>
-      <Button variant="primary" 
-        href=" " 
-        target="_blank">
-          <BsGithub /> &nbsp;
-          {"GitHub"}
-        </Button>
-        {"\n"}
-        {"\n"}
+        <center>
+          <Button variant="primary" href={props.ghLink} target="_blank">
+            <BsGithub /> &nbsp;
+            {"GitHub"}
+          </Button>
+          {"\n"}
+          {"\n"}
 
-        {!props.isBlog && props.demoLink && (
-          <Button
-            variant="primary"
-            href=""
-            target="_blank"
-            style={{ marginLeft: "100px" }} // Update margin to 100px
-          >
-            <CgWebsite /> &nbsp;
-            {"Demo"}
-          </Button>   
-        )} 
+          {!props.isBlog && props.demoLink && (
+            <Button
+              variant="primary"
+              href={props.demoLink}
+              target="_blank"
+              style={{ marginLeft: "10px" }}
+            >
+              <CgWebsite /> &nbsp;
+              {"Demo"}
+            </Button>
+          )}
+        </center>
       </Card.Body>
     </Card>
   );

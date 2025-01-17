@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -51,9 +51,9 @@
       "last 1 safari version"
     ]
   },
-  "description": "This project was built using these technologies.",
+  "description": "Your portfolio description",
   "main": "index.js",
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Ritisha",
+  "license": "MIT"
 }

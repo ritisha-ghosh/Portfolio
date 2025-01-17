@@ -63,7 +63,7 @@ function Contact() {
   };
 
   return (
-    <Container  className="contact-section123" style={{ paddingTop: "30px" }}>
+    <Container className="contact-section123" style={{ paddingTop: "30px" }}>
       <Particle />
       <Container style={{ paddingBottom: "63px" }}>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
@@ -147,7 +147,7 @@ function Contact() {
                   style={{ backgroundColor: "transparent", color: "white" }}
                 />
               </Form.Group>
-              <div style={{ textAlign: "center" , paddingTop: "30px", paddingBottom: "20px"}}>
+              <div style={{ textAlign: "center", paddingTop: "30px", paddingBottom: "20px" }}>
                 <Button
                   variant="primary"
                   type="submit"
