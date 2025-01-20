@@ -78,6 +78,26 @@ function Techstack() {
             <div className="folder-item__details">
               <div
                 className="folder-item__details__name"
+                style={{ display: "flex", alignItems: "center", gap: "60px" }}
+              >
+                <span className="icon-text" style={{ fontSize: "35px", paddingLeft:"5px" }}>C</span>C
+              </div>
+            </div>
+          </li>
+          <li className="folder-item js_folder-item">
+            <div className="folder-item__details">
+              <div
+                className="folder-item__details__name"
+                style={{ display: "flex", alignItems: "center", gap: "50px" }}
+              >
+                <DiJava size={35} /> Java
+              </div>
+            </div>
+          </li>
+          <li className="folder-item js_folder-item">
+            <div className="folder-item__details">
+              <div
+                className="folder-item__details__name"
                 style={{ display: "flex", alignItems: "center", gap: "50px" }}
               >
                 <DiJavascript1 size={35} /> JavaScript
@@ -100,39 +120,27 @@ function Techstack() {
                 className="folder-item__details__name"
                 style={{ display: "flex", alignItems: "center", gap: "50px" }}
               >
-                <DiNodejs size={35} /> Node.js
-              </div>
-            </div>
-          </li>
-          <li className="folder-item js_folder-item">
-            <div className="folder-item__details">
-              <div
-                className="folder-item__details__name"
-                style={{ display: "flex", alignItems: "center", gap: "50px" }}
-              >
                 <DiMongodb size={35} /> MongoDB
               </div>
             </div>
           </li>
-
-          <li className="folder-item js_folder-item">
-            <div className="folder-item__details">
-              <div
-                className="folder-item__details__name"
-                style={{ display: "flex", alignItems: "center", gap: "60px" }}
-              >
-                <span className="icon-text" style={{ fontSize: "35px", paddingLeft:"5px" }}>C</span>C
-              </div>
-            </div>
-          </li>
-
           <li className="folder-item js_folder-item">
             <div className="folder-item__details">
               <div
                 className="folder-item__details__name"
                 style={{ display: "flex", alignItems: "center", gap: "50px" }}
               >
-                <DiJava size={35} /> Java
+                <SiExpress size={35} /> Express.js
+              </div>
+            </div>
+          </li>
+          <li className="folder-item js_folder-item">
+            <div className="folder-item__details">
+              <div
+                className="folder-item__details__name"
+                style={{ display: "flex", alignItems: "center", gap: "50px" }}
+              >
+                <DiNodejs size={35} /> Node.js
               </div>
             </div>
           </li>
@@ -153,16 +161,6 @@ function Techstack() {
                 style={{ display: "flex", alignItems: "center", gap: "50px" }}
               >
                 <DiCss3 size={35} /> CSS
-              </div>
-            </div>
-          </li>
-          <li className="folder-item js_folder-item">
-            <div className="folder-item__details">
-              <div
-                className="folder-item__details__name"
-                style={{ display: "flex", alignItems: "center", gap: "50px" }}
-              >
-                <SiExpress size={35} /> Express.js
               </div>
             </div>
           </li>
