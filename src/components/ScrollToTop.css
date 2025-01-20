@@ -1,0 +1,32 @@
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+  width: 5px; /* Make the scrollbar thinner */
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e; /* Dark background for the track */
+  border-radius: 10px; /* Rounded corners for a futuristic look */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #00ffcc, #0066ff); /* Gradient color for the thumb */
+  border-radius: 10px; /* Rounded corners for a futuristic look */
+  animation: gradientAnimation 3s ease infinite; /* Add animation */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #00cc99, #0055cc); /* Slightly different gradient on hover */
+}
+
+/* Define the gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background: linear-gradient(45deg, #00ffcc, #0066ff);
+  }
+  50% {
+    background: linear-gradient(45deg, #ff00cc, #6600ff);
+  }
+  100% {
+    background: linear-gradient(45deg, #00ffcc, #0066ff);
+  }
+}

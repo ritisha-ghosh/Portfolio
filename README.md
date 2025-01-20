@@ -33,4 +33,3 @@ The page will reload if you make edits.
 
 **Ritisha**
 
-<!-- ...existing code... -->
