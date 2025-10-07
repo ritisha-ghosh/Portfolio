@@ -13,7 +13,7 @@ function Particle() {
         },
         particles: {
           number: {
-            value: 120, // Slightly reduce the number of particles
+            value: 140, // Slightly reduce the number of particles
             density: {
               enable: true,
               value_area: 1000, // Increase value area for more space between particles
@@ -33,7 +33,7 @@ function Particle() {
             },
           },
           opacity: {
-            value: 0.15, // Make particles slightly more transparent
+            value: 0.2, // Make particles more transparent
             random: true, // Randomize opacity
             anim: {
               enable: true,
@@ -91,8 +91,8 @@ function Particle() {
               },
             },
             bubble: {
-              distance: 140, // Slightly reduce distance for bubble effect
-              size: 5, // Slightly reduce size for bubble effect
+              distance: 150, // Reduce distance for bubble effect
+              size: 6, // Make bubble particles smaller
               duration: 1.5, // Reduce duration for bubble effect
               opacity: 0.7, // Reduce opacity for bubble effect
               speed: 2, // Reduce speed for bubble effect

@@ -11,7 +11,7 @@ function EducationRoadmap() {
       university: "Maulana Abul Kalam Azad University of Technology",
       degree: "Bachelor of Technology (B.Tech)",
       stream: "Computer Science & Engineering",
-      cgpa: "CGPA - xx (completed 5 semesters)",
+      cgpa: "CGPA - xx (completed 4 semesters)",
       duration: "Oct 2022 - 2026",
     },
     {
