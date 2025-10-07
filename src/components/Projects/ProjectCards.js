@@ -23,9 +23,7 @@ function ProjectCards(props) {
           </span>
         </Card.Text>
         <center>
-          <Button variant="primary" 
-          href={props.ghLink} 
-          target="_blank">
+          <Button variant="primary" href={props.ghLink} target="_blank">
             <BsGithub /> &nbsp;
             {"GitHub"}
           </Button>
